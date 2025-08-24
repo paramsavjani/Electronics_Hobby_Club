@@ -96,7 +96,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground">Email</h4>
-                    <p className="text-muted-foreground">contact@electronexus.com</p>
+                    <p className="text-muted-foreground">ehc@daiict.ac.in</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">
@@ -105,7 +105,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground">Phone</h4>
-                    <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                    <p className="text-muted-foreground">+91 79 3052 0000</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">
@@ -115,8 +115,8 @@ const Contact = () => {
                   <div>
                     <h4 className="font-semibold text-foreground">Location</h4>
                     <p className="text-muted-foreground">
-                      Engineering Building, Room 205<br />
-                      Tech University Campus
+                      Electronics Lab, DA-IICT<br />
+                      Near Indroda Circle, Gandhinagar, Gujarat 382007
                     </p>
                   </div>
                 </div>
@@ -126,20 +126,20 @@ const Contact = () => {
             {/* Office Hours */}
             <div className="glass neon-border p-6 rounded-xl">
               <h3 className="text-xl font-heading font-semibold mb-4 text-foreground">
-                Office Hours
+                Club Hours
               </h3>
               <div className="space-y-2 text-muted-foreground">
                 <div className="flex justify-between">
                   <span>Monday - Friday</span>
-                  <span>9:00 AM - 6:00 PM</span>
+                  <span>4:00 PM - 8:00 PM</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Saturday</span>
-                  <span>10:00 AM - 4:00 PM</span>
+                  <span>Saturday - Sunday</span>
+                  <span>10:00 AM - 6:00 PM</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Sunday</span>
-                  <span>Closed</span>
+                  <span>Workshop Days</span>
+                  <span>Extended Hours</span>
                 </div>
               </div>
             </div>

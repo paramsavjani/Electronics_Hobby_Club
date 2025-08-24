@@ -4,23 +4,23 @@ const About = () => {
   const features = [
     {
       icon: <Cpu className="h-8 w-8" />,
-      title: "Innovation Lab",
-      description: "State-of-the-art facilities with latest tools and equipment for prototyping and development."
+      title: "Hardware & IoT",
+      description: "Work with Arduino, Raspberry Pi, ESP32, STM microcontrollers, drones, and IoT systems."
     },
     {
       icon: <Users className="h-8 w-8" />,
-      title: "Community",
-      description: "Connect with like-minded individuals passionate about electronics and technology."
+      title: "25 Years Legacy",
+      description: "Oldest technical club at DA-IICT with Silver Jubilee celebration and proven track record."
     },
     {
       icon: <Trophy className="h-8 w-8" />,
       title: "Competitions",
-      description: "Participate in hackathons, robotics competitions, and innovation challenges."
+      description: "Electrothon, RoboClash, I.Bot racing, and participation in Robofest Gujarat state competitions."
     },
     {
       icon: <Lightbulb className="h-8 w-8" />,
-      title: "Learning",
-      description: "Workshops, seminars, and hands-on sessions led by industry experts and faculty."
+      title: "Real Projects",
+      description: "Build drones, battle bots, IoT systems, and automation projects with real-world impact."
     }
   ];
 
@@ -33,14 +33,14 @@ const About = () => {
             Who We Are
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            ElectroNexus is a vibrant community of electronics enthusiasts, innovators, and future engineers. 
-            We bring together students passionate about technology to learn, create, and push the boundaries 
-            of what's possible in the world of electronics and engineering.
+            The Electronics Hobby Club (EHC), established in 2001, is the oldest and most dynamic technical 
+            club at DA-IICT. With over two decades of legacy and currently celebrating our Silver Jubilee 
+            (25 years), we've been a hub for innovation, creativity, and technical excellence.
           </p>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Our mission is to foster innovation, collaboration, and learning through hands-on projects, 
-            workshops, competitions, and real-world applications that prepare our members for the future 
-            of technology.
+            Our mission is to ignite curiosity in electronics, robotics, and emerging technologies, empowering 
+            students to learn by doing, build impactful projects, and collaborate with like-minded innovators 
+            through hands-on experience beyond classrooms.
           </p>
         </div>
 

@@ -25,13 +25,13 @@ const Hero = () => {
       <div className="relative z-10 text-center space-y-8 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
         <div className="space-y-4 animate-fade-in">
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-heading font-black gradient-text-hero leading-tight">
-            Innovate. Create.
+            Learn. Build.
             <br />
-            <span className="text-6xl sm:text-7xl lg:text-8xl">Electrify.</span>
+            <span className="text-6xl sm:text-7xl lg:text-8xl">Innovate.</span>
           </h1>
           <p className="text-xl sm:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Join the future of electronics engineering. Where innovation meets passion, 
-            and ideas become reality through cutting-edge technology and collaborative creativity.
+            DA-IICT's oldest technical club celebrating 25 years of excellence. Join our legacy of 
+            innovation in electronics, robotics, and emerging technologies since 2001.
           </p>
         </div>
 

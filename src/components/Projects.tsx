@@ -4,45 +4,45 @@ import { ExternalLink, Github } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
-      title: "Smart Home Automation",
-      description: "IoT-based home automation system with voice control and mobile app integration.",
-      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop",
-      tags: ["IoT", "Arduino", "Mobile App"],
-      featured: true
-    },
-    {
-      title: "Autonomous Robot",
-      description: "Self-navigating robot with computer vision and obstacle avoidance capabilities.",
+      title: "ESP32-Based Drone & Controller",
+      description: "Lightweight and cost-effective wireless platform for drone control and communication.",
       image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=300&fit=crop",
-      tags: ["Robotics", "AI", "Computer Vision"],
-      featured: false
-    },
-    {
-      title: "Wireless Power Transfer",
-      description: "Efficient wireless charging system for multiple devices using electromagnetic induction.",
-      image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=300&fit=crop",
-      tags: ["Power Electronics", "Wireless", "Efficiency"],
+      tags: ["ESP32", "Drone", "Wireless"],
       featured: true
     },
     {
-      title: "Smart Agriculture Monitor",
-      description: "Real-time monitoring system for soil moisture, temperature, and crop health analytics.",
+      title: "Air Quality Monitoring with Drone",
+      description: "Arduino-based system using MQ135/PMS sensors for real-time environmental monitoring.",
       image: "https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=400&h=300&fit=crop",
-      tags: ["Agriculture", "Sensors", "Data Analytics"],
+      tags: ["Arduino", "Sensors", "Environmental"],
       featured: false
     },
     {
-      title: "Electric Vehicle Charger",
-      description: "Fast-charging station with smart grid integration and renewable energy support.",
+      title: "Automatic Safety Braking System",
+      description: "Collision-avoidance prototype using sensors and actuators for vehicle safety.",
       image: "https://images.unsplash.com/photo-1593941707882-a5bac6861d75?w=400&h=300&fit=crop",
-      tags: ["EV Technology", "Smart Grid", "Green Energy"],
+      tags: ["Safety", "Automation", "Sensors"],
       featured: true
     },
     {
-      title: "Gesture Control Interface",
-      description: "Hand gesture recognition system for controlling devices without physical contact.",
+      title: "Client-Server Chat using ESP32",
+      description: "Real-time IoT communication project demonstrating wireless data transmission protocols.",
+      image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=300&fit=crop",
+      tags: ["ESP32", "IoT", "Communication"],
+      featured: false
+    },
+    {
+      title: "3D Printed Mini Battle Bot",
+      description: "Remotely controlled combat robot using Blynk IoT platform for wireless operation.",
+      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop",
+      tags: ["3D Printing", "Robotics", "Blynk IoT"],
+      featured: true
+    },
+    {
+      title: "STM32 Microcontroller Projects",
+      description: "Advanced embedded systems using STM32 for real-time control and processing applications.",
       image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400&h=300&fit=crop",
-      tags: ["Machine Learning", "Sensors", "HCI"],
+      tags: ["STM32", "Embedded", "Real-time"],
       featured: false
     }
   ];

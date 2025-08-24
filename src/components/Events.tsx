@@ -5,47 +5,56 @@ const Events = () => {
   const events = [
     {
       type: "upcoming",
-      title: "TechFest 2024",
-      date: "March 15, 2024",
+      title: "Electrothon 2025",
+      date: "January 15 - February 15, 2025",
+      time: "Month-long Competition",
+      location: "DA-IICT Campus",
+      description: "Month-long ideation-to-prototype competition in drones, humanoids, and automation categories with expert jury evaluation.",
+      featured: true
+    },
+    {
+      type: "upcoming",
+      title: "I.Bot Racing Championship",
+      date: "March 20, 2025",
       time: "10:00 AM - 6:00 PM",
       location: "Main Auditorium",
-      description: "Annual technology festival featuring project exhibitions, competitions, and guest speakers from leading tech companies.",
+      description: "Bot racing event with wired/wireless bots tackling tricky obstacle courses, testing design efficiency and driver control.",
+      featured: false
+    },
+    {
+      type: "upcoming", 
+      title: "RoboClash Combat Tournament",
+      date: "August 25, 2025",
+      time: "2:00 PM - 8:00 PM",
+      location: "Sports Complex",
+      description: "Thrilling combat robotics competition in the 'Cage of Destruction', testing bot durability, power, and innovation.",
       featured: true
     },
     {
-      type: "upcoming",
-      title: "PCB Design Workshop",
-      date: "March 8, 2024",
-      time: "2:00 PM - 5:00 PM",
+      type: "past",
+      title: "FPV Drone Racing (Ifest 2024)",
+      date: "November 2024",
+      time: "Full Day Event",
+      location: "Campus Grounds",
+      description: "High-speed drone racing using FPV goggles for immersive cockpit-like experience through challenging obstacle courses.",
+      featured: true
+    },
+    {
+      type: "past",
+      title: "Robofest Gujarat 2024",
+      date: "December 2024",
+      time: "3 Days",
+      location: "Gujarat State",
+      description: "State-level autonomous robotics competition with ₹2.5 Lakhs prize pool where EHC achieved finalist position.",
+      featured: false
+    },
+    {
+      type: "past",
+      title: "Arduino & ESP32 Workshop",
+      date: "September 2024",
+      time: "Full Day",
       location: "Electronics Lab",
-      description: "Hands-on workshop covering PCB design principles, tools, and manufacturing processes.",
-      featured: false
-    },
-    {
-      type: "past",
-      title: "Robotics Hackathon",
-      date: "February 20, 2024",
-      time: "24 Hours",
-      location: "Innovation Center",
-      description: "48-hour intensive hackathon focused on autonomous robotics and AI integration.",
-      featured: true
-    },
-    {
-      type: "upcoming",
-      title: "Industry Talk: IoT Revolution",
-      date: "March 22, 2024",
-      time: "4:00 PM - 5:30 PM",
-      location: "Conference Hall",
-      description: "Expert insights on the latest trends in IoT, smart cities, and connected devices.",
-      featured: false
-    },
-    {
-      type: "past",
-      title: "Arduino Bootcamp",
-      date: "February 10, 2024",
-      time: "9:00 AM - 4:00 PM",
-      location: "Workshop Room",
-      description: "Comprehensive introduction to Arduino programming and hardware interfacing.",
+      description: "Hands-on session with microcontrollers, IoT project development, and real-world applications.",
       featured: false
     }
   ];

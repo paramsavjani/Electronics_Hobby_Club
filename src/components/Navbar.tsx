@@ -26,7 +26,7 @@ const Navbar = () => {
               <div className="absolute inset-0 bg-primary/20 blur-lg rounded-full"></div>
             </div>
             <span className="text-xl font-heading font-bold gradient-text-primary">
-              ElectroNexus
+              Electronics Hobby Club
             </span>
           </div>
 
