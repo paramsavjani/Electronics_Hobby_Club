@@ -25,6 +25,17 @@ const Team = () => {
       }
     },
     {
+      name: "Ayush Patel",
+      role: "Core Member",
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face",
+      bio: "Supporting club operations and mentoring members in embedded systems and automation projects.",
+      social: {
+        github: "#",
+        linkedin: "#",
+        email: "shreyas@ehc-daiict.com"
+      }
+    },
+    {
       name: "Mahir Shah",
       role: "Core Member",
       image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&h=300&fit=crop&crop=face",

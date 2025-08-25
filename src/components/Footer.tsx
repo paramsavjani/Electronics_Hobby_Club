@@ -47,7 +47,7 @@ const Footer = () => {
               </span>
             </div>
             <p className="text-muted-foreground leading-relaxed max-w-md">
-              DA-IICT's oldest technical club since 2001. Celebrating 25 years of innovation 
+              DAU's oldest technical club since 2001. Celebrating 25 years of innovation 
               in electronics, robotics, and emerging technologies.
             </p>
             <div className="flex space-x-4">
@@ -119,7 +119,7 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="border-t border-primary/20 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-muted-foreground text-sm">
-            © {currentYear} Electronics Hobby Club, DA-IICT. All rights reserved.
+            © {currentYear} Electronics Hobby Club, DAU. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">

@@ -8,7 +8,7 @@ const Events = () => {
       title: "Electrothon 2025",
       date: "January 15 - February 15, 2025",
       time: "Month-long Competition",
-      location: "DA-IICT Campus",
+      location: "DAU Campus",
       description: "Month-long ideation-to-prototype competition in drones, humanoids, and automation categories with expert jury evaluation.",
       featured: true
     },

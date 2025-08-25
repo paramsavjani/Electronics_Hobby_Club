@@ -10,7 +10,7 @@ const About = () => {
     {
       icon: <Users className="h-8 w-8" />,
       title: "25 Years Legacy",
-      description: "Oldest technical club at DA-IICT with Silver Jubilee celebration and proven track record."
+      description: "Oldest technical club at DAU with Silver Jubilee celebration and proven track record."
     },
     {
       icon: <Trophy className="h-8 w-8" />,
@@ -34,7 +34,7 @@ const About = () => {
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
             The Electronics Hobby Club (EHC), established in 2001, is the oldest and most dynamic technical 
-            club at DA-IICT. With over two decades of legacy and currently celebrating our Silver Jubilee 
+            club at DAU. With over two decades of legacy and currently celebrating our Silver Jubilee 
             (25 years), we've been a hub for innovation, creativity, and technical excellence.
           </p>
           <p className="text-lg text-muted-foreground leading-relaxed">

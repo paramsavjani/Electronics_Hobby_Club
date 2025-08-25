@@ -30,7 +30,7 @@ const Hero = () => {
             <span className="text-6xl sm:text-7xl lg:text-8xl">Innovate.</span>
           </h1>
           <p className="text-xl sm:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            DA-IICT's oldest technical club celebrating 25 years of excellence. Join our legacy of 
+            DAU's oldest technical club celebrating 25 years of excellence. Join our legacy of 
             innovation in electronics, robotics, and emerging technologies since 2001.
           </p>
         </div>

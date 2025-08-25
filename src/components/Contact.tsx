@@ -96,7 +96,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-foreground">Email</h4>
-                    <p className="text-muted-foreground">ehc@daiict.ac.in</p>
+                    <p className="text-muted-foreground">ehc@dau.ac.in</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">
@@ -115,7 +115,7 @@ const Contact = () => {
                   <div>
                     <h4 className="font-semibold text-foreground">Location</h4>
                     <p className="text-muted-foreground">
-                      Electronics Lab, DA-IICT<br />
+                      Electronics Lab, DAU<br />
                       Near Indroda Circle, Gandhinagar, Gujarat 382007
                     </p>
                   </div>
