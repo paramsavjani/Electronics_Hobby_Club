@@ -105,29 +105,12 @@ const Projects = () => {
                 ))}
               </div>
 
-              {/* Action Buttons */}
-              <div className="flex gap-3">
-                <Button variant="ghost" size="sm" className="flex-1">
-                  <ExternalLink className="h-4 w-4 mr-2" />
-                  Demo
-                </Button>
-                <Button variant="outline" size="sm" className="flex-1">
-                  <Github className="h-4 w-4 mr-2" />
-                  Code
-                </Button>
-              </div>
             </div>
 
             {/* Hover Glow Effect */}
             <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 transition-opacity duration-500 pointer-events-none"></div>
           </div>
         ))}
-      </div>
-
-      <div className="text-center mt-12">
-        <Button variant="glow" size="lg">
-          View All Projects
-        </Button>
       </div>
     </section>
   );

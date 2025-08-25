@@ -36,16 +36,9 @@ const Hero = () => {
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up">
-          <Button variant="hero" size="lg" className="text-lg px-8 py-4">
-            Explore Events
+          <Button variant="hero" size="lg" onClick={() => (window.location.href = "#about")} className="text-lg px-8 py-4">
+            Explore
           </Button>
-          <Button variant="glow" size="lg" className="text-lg px-8 py-4">
-            Join Us Now
-          </Button>
-        </div>
-
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <ChevronDown className="h-8 w-8 text-primary" />
         </div>
       </div>
 
