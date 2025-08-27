@@ -77,7 +77,7 @@ const Team = () => {
       name: "Jeet Patel",
       role: "Extended Core",
       image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face",
+        "/team/images/jeet.jpg",
       bio: "Supporting project development and event coordination for club activities and competitions.",
       social: {
         github: "#",
