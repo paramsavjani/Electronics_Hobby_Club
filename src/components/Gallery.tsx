@@ -4,53 +4,15 @@ import { X, ZoomIn } from "lucide-react";
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
-  const galleryImages = [
-    {
-      src: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=600&h=400&fit=crop",
-      alt: "Electronics Workshop",
-      category: "workshops"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?w=600&h=400&fit=crop",
-      alt: "Robotics Competition",
-      category: "competitions"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=400&fit=crop",
-      alt: "PCB Design Session",
-      category: "workshops"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&h=400&fit=crop",
-      alt: "Team Project",
-      category: "projects"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&h=400&fit=crop",
-      alt: "Tech Demo",
-      category: "events"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=600&h=400&fit=crop",
-      alt: "Innovation Lab",
-      category: "facilities"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1593941707882-a5bac6861d75?w=600&h=400&fit=crop",
-      alt: "Smart Device Testing",
-      category: "projects"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop",
-      alt: "IoT Workshop",
-      category: "workshops"
-    },
-    {
-      src: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=600&h=400&fit=crop",
-      alt: "Circuit Assembly",
-      category: "workshops"
-    }
-  ];
+  // const Gallery = () => {
+  // const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  // Generate images dynamically from /public/image/1.jpg to 202.jpg
+  const galleryImages = Array.from({ length: 51 }, (_, i) => ({
+    src: `/image/${i + 1}.jpg`,   // will resolve to public/image/1.jpg ... 202.jpg
+    alt: `Image ${i + 1}`,
+    category: ""                  // or null if you want "none"
+  }));
 
   return (
     <section id="gallery" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
