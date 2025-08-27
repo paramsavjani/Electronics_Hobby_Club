@@ -5,91 +5,98 @@ const Team = () => {
     {
       name: "Param Savjani",
       role: "Convener",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face",
+      image: "/team/images/param.jpg",
       bio: "Leading the Electronics Hobby Club vision and driving innovation in robotics and IoT projects.",
       social: {
-        github: "#",
-        linkedin: "#",
-        email: "param@ehc-daiict.com"
-      }
+        github: "https://github.com/paramsavjani",
+        linkedin: "https://linkedin.com/in/paramsavjani",
+        email: "paramsavjani3010@gmail.com",
+      },
     },
     {
       name: "Shreyas Dutta",
       role: "Deputy Convener",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face",
+      image:
+        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face",
       bio: "Supporting club operations and mentoring members in embedded systems and automation projects.",
       social: {
         github: "#",
         linkedin: "#",
-        email: "shreyas@ehc-daiict.com"
-      }
+        email: "shreyas@ehc-daiict.com",
+      },
     },
     {
       name: "Ayush Patel",
       role: "Core Member",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face",
+      image:
+        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face",
       bio: "Supporting club operations and mentoring members in embedded systems and automation projects.",
       social: {
         github: "#",
         linkedin: "#",
-        email: "shreyas@ehc-daiict.com"
-      }
+        email: "shreyas@ehc-daiict.com",
+      },
     },
     {
       name: "Mahir Shah",
       role: "Core Member",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&h=300&fit=crop&crop=face",
+      image:
+        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&h=300&fit=crop&crop=face",
       bio: "Expert in drone technology and wireless communication systems, leading hardware innovations.",
       social: {
         github: "#",
         linkedin: "#",
-        email: "mahir@ehc-daiict.com"
-      }
+        email: "mahir@ehc-daiict.com",
+      },
     },
     {
       name: "Malay Vaghasiya",
       role: "Core Member",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b056b6e0?w=300&h=300&fit=crop&crop=face",
+      image:
+        "https://images.unsplash.com/photo-1494790108755-2616b056b6e0?w=300&h=300&fit=crop&crop=face",
       bio: "Specializing in combat robotics and mechanical design for competitive bot building.",
       social: {
         github: "#",
         linkedin: "#",
-        email: "malay@ehc-daiict.com"
-      }
+        email: "malay@ehc-daiict.com",
+      },
     },
     {
       name: "Preet Patel",
       role: "Core Member",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&crop=face",
+      image:
+        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&crop=face",
       bio: "IoT and sensor integration specialist, developing smart monitoring and automation systems.",
       social: {
         github: "#",
         linkedin: "#",
-        email: "preet@ehc-daiict.com"
-      }
+        email: "preet@ehc-daiict.com",
+      },
     },
     {
       name: "Jeet Patel",
       role: "Extended Core",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face",
+      image:
+        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face",
       bio: "Supporting project development and event coordination for club activities and competitions.",
       social: {
         github: "#",
         linkedin: "#",
-        email: "jeet@ehc-daiict.com"
-      }
+        email: "jeet@ehc-daiict.com",
+      },
     },
     {
       name: "Vyom Patel",
       role: "Extended Core",
-      image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=300&h=300&fit=crop&crop=face",
+      image:
+        "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=300&h=300&fit=crop&crop=face",
       bio: "Enthusiastic about microcontroller programming and PCB design for innovative electronics projects.",
       social: {
         github: "#",
         linkedin: "#",
-        email: "vyom@ehc-daiict.com"
-      }
-    }
+        email: "vyom@ehc-daiict.com",
+      },
+    },
   ];
 
   return (
