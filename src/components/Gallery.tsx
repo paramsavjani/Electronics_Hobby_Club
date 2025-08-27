@@ -8,7 +8,7 @@ const Gallery = () => {
   // const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   // Generate images dynamically from /public/image/1.jpg to 202.jpg
-  const galleryImages = Array.from({ length: 51 }, (_, i) => ({
+  const galleryImages = Array.from({ length: 48 }, (_, i) => ({
     src: `/image/${i + 1}.jpg`,   // will resolve to public/image/1.jpg ... 202.jpg
     alt: `Image ${i + 1}`,
     category: ""                  // or null if you want "none"
