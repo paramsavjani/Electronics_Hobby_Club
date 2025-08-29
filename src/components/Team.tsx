@@ -100,75 +100,44 @@ const Team = () => {
   ];
 
   return (
-    <section id="team" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <section
+      id="team"
+      className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto"
+    >
+      {/* Heading */}
       <div className="text-center mb-16 animate-fade-in">
         <h2 className="text-4xl sm:text-5xl font-heading font-bold gradient-text-primary mb-6">
           Meet Our Team
         </h2>
         <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-          Talented individuals driving innovation and fostering a community of electronic enthusiasts.
+          Talented individuals driving innovation and fostering a community of
+          electronic enthusiasts.
         </p>
       </div>
 
+      {/* Team Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {teamMembers.map((member, index) => (
           <div
             key={index}
-            className="group relative overflow-hidden rounded-xl glass neon-border p-6 text-center hover:shadow-glow-primary transition-all duration-500 transform hover:scale-105 animate-slide-up"
-            style={{ animationDelay: `${index * 0.1}s` }}
+            className="relative group rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500"
           >
-            {/* Profile Image with Glow Effect */}
-            <div className="relative mb-6">
-              <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-primary/30 group-hover:border-primary transition-all duration-300">
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-              </div>
-              <div className="absolute inset-0 rounded-full bg-gradient-primary opacity-0 group-hover:opacity-20 transition-opacity duration-300 w-32 h-32 mx-auto"></div>
+            {/* Full Image */}
+            <img
+              src={member.image}
+              alt={member.name}
+              className="w-full h-96 object-cover transform group-hover:scale-110 transition-transform duration-700"
+            />
+
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+            {/* Text Overlay */}
+            <div className="absolute bottom-0 left-0 right-0 p-4 text-white z-10">
+              <h3 className="text-2xl font-bold">{member.name}</h3>
+              <p className="text-primary font-semibold mb-2">{member.role}</p>
+              <p className="text-sm text-gray-200">{member.bio}</p>
             </div>
-
-            {/* Member Info */}
-            <div className="space-y-4">
-              <div>
-                <h3 className="text-xl font-heading font-semibold text-foreground group-hover:text-primary transition-colors">
-                  {member.name}
-                </h3>
-                <p className="text-accent font-medium">
-                  {member.role}
-                </p>
-              </div>
-
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                {member.bio}
-              </p>
-
-              {/* Social Links */}
-              <div className="flex justify-center space-x-4 pt-4">
-                <a
-                  href={member.social.github}
-                  className="p-2 rounded-full border border-muted hover:border-primary hover:bg-primary/10 transition-all duration-300 hover:shadow-glow-primary"
-                >
-                  <Github className="h-4 w-4 text-muted-foreground hover:text-primary transition-colors" />
-                </a>
-                <a
-                  href={member.social.linkedin}
-                  className="p-2 rounded-full border border-muted hover:border-secondary hover:bg-secondary/10 transition-all duration-300 hover:shadow-glow-secondary"
-                >
-                  <Linkedin className="h-4 w-4 text-muted-foreground hover:text-secondary transition-colors" />
-                </a>
-                <a
-                  href={`mailto:${member.social.email}`}
-                  className="p-2 rounded-full border border-muted hover:border-accent hover:bg-accent/10 transition-all duration-300 hover:shadow-glow-accent"
-                >
-                  <Mail className="h-4 w-4 text-muted-foreground hover:text-accent transition-colors" />
-                </a>
-              </div>
-            </div>
-
-            {/* Hover Glow Effect */}
-            <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 transition-opacity duration-500 pointer-events-none rounded-xl"></div>
           </div>
         ))}
       </div>
