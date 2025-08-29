@@ -54,16 +54,17 @@ const Navbar = () => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="md:hidden bg-transparent">
             <Button
-              variant="ghost"
+              // variant="ghost"
               size="icon"
+              className="bg-transparent"
               onClick={() => setIsOpen(!isOpen)}
             >
               {isOpen ? (
-                <X className="h-6 w-6" />
+                <X className="h-6 w-6 text-white" />
               ) : (
-                <Menu className="h-6 w-6" />
+                <Menu className="h-6 w-6 text-white" />
               )}
             </Button>
           </div>
