@@ -8,20 +8,24 @@ const Gallery = () => {
   // const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   // Generate images dynamically from /public/image/1.jpg to 202.jpg
-  const galleryImages = Array.from({ length: 48 }, (_, i) => ({
-    src: `/image/${i + 1}.jpg`,   // will resolve to public/image/1.jpg ... 202.jpg
+  const galleryImages = Array.from({ length: 24 }, (_, i) => ({
+    src: `/image/${i + 1}.jpg`, // will resolve to public/image/1.jpg ... 202.jpg
     alt: `Image ${i + 1}`,
-    category: ""                  // or null if you want "none"
+    category: "", // or null if you want "none"
   }));
 
   return (
-    <section id="gallery" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <section
+      id="gallery"
+      className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto"
+    >
       <div className="text-center mb-16 animate-fade-in">
         <h2 className="text-4xl sm:text-5xl font-heading font-bold gradient-text-primary mb-6">
           Gallery
         </h2>
         <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-          Explore moments from our workshops, competitions, and innovative projects.
+          Explore moments from our workshops, competitions, and innovative
+          projects.
         </p>
       </div>
 
@@ -39,12 +43,14 @@ const Gallery = () => {
               alt={image.alt}
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
             />
-            
+
             {/* Overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <div className="absolute bottom-4 left-4 text-white">
                 <h3 className="font-heading font-semibold">{image.alt}</h3>
-                <p className="text-sm text-muted-foreground capitalize">{image.category}</p>
+                <p className="text-sm text-muted-foreground capitalize">
+                  {image.category}
+                </p>
               </div>
               <div className="absolute top-4 right-4">
                 <ZoomIn className="h-6 w-6 text-white" />
@@ -59,7 +65,7 @@ const Gallery = () => {
 
       {/* Lightbox Modal */}
       {selectedImage && (
-        <div 
+        <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-background/90 backdrop-blur-sm"
           onClick={() => setSelectedImage(null)}
         >
