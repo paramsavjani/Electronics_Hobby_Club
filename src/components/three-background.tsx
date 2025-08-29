@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import * as React from "react";
@@ -115,6 +114,12 @@ export function ThreeBackground({
     const spriteTexture = new THREE.CanvasTexture(spriteCanvas);
     spriteTexture.colorSpace = THREE.SRGBColorSpace;
     spriteTexture.needsUpdate = true;
+    // - use premultiplied alpha for correct additive blending
+    // - set proper mip/mag filters to avoid opaque borders in lower mip levels
+    spriteTexture.premultiplyAlpha = true;
+    spriteTexture.minFilter = THREE.LinearMipmapLinearFilter;
+    spriteTexture.magFilter = THREE.LinearFilter;
+    spriteTexture.generateMipmaps = true;
 
     // Particle layers
     const layers = 3;
@@ -158,6 +163,7 @@ export function ThreeBackground({
         blending: THREE.AdditiveBlending,
         depthWrite: false,
         sizeAttenuation: true,
+        alphaTest: 0.035,
       });
 
       const points = new THREE.Points(geo, mat);
@@ -258,6 +264,7 @@ export function ThreeBackground({
         blending: THREE.AdditiveBlending,
         depthWrite: false,
         sizeAttenuation: true,
+        alphaTest: 0.035,
       });
       const nodePoints = new THREE.Points(nodeGeo, nodeMat);
       scene.add(nodePoints);
@@ -299,8 +306,8 @@ export function ThreeBackground({
     };
     const waves: Wave[] = [];
     {
-      const waveCount = 3;
-      const samples = 256;
+      const waveCount = isMobile || reduceMotion ? 2 : 3;
+      const samples = isMobile || reduceMotion ? 192 : 256;
       const xMin = -1.2;
       const xMax = 1.2;
       for (let i = 0; i < waveCount; i++) {
@@ -379,26 +386,31 @@ export function ThreeBackground({
         requestAnimationFrame(onPointerMoveScheduled);
       }
     };
-    container.addEventListener("pointermove", onPointerMoveRaw);
+    if (!reduceMotion) {
+      container.addEventListener("pointermove", onPointerMoveRaw);
+    }
 
     // World group, neon grid, and floating "chip" cubes
     const world = new THREE.Group();
     scene.add(world);
 
-    // Neon grid (PCB-like), additive blended
-    const gridColor = new THREE.Color(colors?.[0] || "#22d3ee"); // cyan
-    const grid = new THREE.GridHelper(12, 80, gridColor, gridColor);
-    (grid.material as THREE.LineBasicMaterial).transparent = true;
-    (grid.material as THREE.LineBasicMaterial).opacity = Math.min(
-      1,
-      opacity * (isMobile ? 0.14 : 0.18)
-    );
-    (grid.material as THREE.LineBasicMaterial).blending =
-      THREE.AdditiveBlending;
-    (grid.material as THREE.LineBasicMaterial).depthWrite = false;
-    grid.rotation.x = Math.PI / 2.35; // tilt towards camera
-    grid.position.z = depth * 0.08;
-    world.add(grid);
+    const showGrid = !reduceMotion && !isMobile;
+    let grid: THREE.GridHelper | null = null;
+    if (showGrid) {
+      const gridColor = new THREE.Color(colors?.[0] || "#22d3ee"); // cyan
+      grid = new THREE.GridHelper(12, 80, gridColor, gridColor);
+      (grid.material as THREE.LineBasicMaterial).transparent = true;
+      (grid.material as THREE.LineBasicMaterial).opacity = Math.min(
+        1,
+        opacity * 0.18
+      );
+      (grid.material as THREE.LineBasicMaterial).blending =
+        THREE.AdditiveBlending;
+      (grid.material as THREE.LineBasicMaterial).depthWrite = false;
+      grid.rotation.x = Math.PI / 2.35; // tilt towards camera
+      grid.position.z = depth * 0.08;
+      world.add(grid);
+    }
 
     // Floating chip cubes with glowing edges
     type Chip = {
@@ -419,7 +431,11 @@ export function ThreeBackground({
     const chipFaceMat = new THREE.MeshBasicMaterial({
       color: new THREE.Color("#0ea5e9"), // sky-500-ish
       transparent: true,
-      opacity: Math.min(1, opacity * 0.12),
+      opacity: Math.min(
+        1,
+        isMobile || reduceMotion ? opacity * 0.04 : opacity * 0.12
+      ),
+      depthWrite: false,
     });
     const chipEdgeGeom = new THREE.EdgesGeometry(chipGeom);
     const chipEdgeMat = new THREE.LineBasicMaterial({
@@ -436,6 +452,7 @@ export function ThreeBackground({
       const grp = new THREE.Group();
       grp.add(body);
       grp.add(edges);
+      if (isMobile) body.visible = false;
 
       // Randomize initial transform within normalized XY, mid-front Z slab
       grp.position.set(
@@ -773,9 +790,11 @@ export function ThreeBackground({
       });
 
       // Cleanup for world, grid, and chips
-      world.remove(grid);
+      if (grid) {
+        world.remove(grid);
+        (grid.material as THREE.LineBasicMaterial).dispose();
+      }
       scene.remove(world);
-      (grid.material as THREE.LineBasicMaterial).dispose();
       // dispose chip shared resources
       chipGeom.dispose();
       chipEdgeGeom.dispose();
