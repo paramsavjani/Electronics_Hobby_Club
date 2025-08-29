@@ -7,11 +7,11 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { name: "Home", href: "/" }, // full route
-    { name: "Team", href: "/team" }, // separate page
+    { name: "Home", href: "/" },
+    { name: "Gallery", href: "/gallery" },
     { name: "Projects", href: "/projects" },
     { name: "Events", href: "/events" },
-    { name: "Gallery", href: "/gallery" },
+    { name: "Team", href: "/team" },
   ];
 
   return (
