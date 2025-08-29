@@ -1,51 +1,96 @@
+"use client";
+
+import * as React from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
+import { ThreeBackground } from "./three-background";
 
-const Hero = () => {
+export default function Hero() {
+  const handleExplore = React.useCallback(() => {
+    const el = document.querySelector("#about");
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    else window.location.hash = "#about";
+  }, []);
+
   return (
-    <section 
-      id="home" 
-      className="relative min-h-screen flex items-center justify-center particle-bg overflow-hidden"
-      style={{
-        backgroundImage: `linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.9)), url(${heroBg})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed'
-      }}
+    <section
+      id="home"
+      className="relative min-h-[90svh] md:min-h-screen flex items-center justify-center overflow-hidden"
+      aria-labelledby="hero-title"
     >
-      {/* Animated particles overlay */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-primary rounded-full animate-ping"></div>
-        <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-secondary rounded-full animate-ping animation-delay-1000"></div>
-        <div className="absolute bottom-1/4 left-1/3 w-1.5 h-1.5 bg-accent rounded-full animate-ping animation-delay-2000"></div>
-        <div className="absolute top-2/3 right-1/4 w-1 h-1 bg-primary rounded-full animate-ping animation-delay-3000"></div>
-      </div>
+      {/* Background image */}
+      <div
+        className="absolute inset-0 bg-center bg-cover"
+        style={{ backgroundImage: "url(/images/hero-bg.png)" }}
+        aria-hidden="true"
+      />
 
-      <div className="relative z-10 text-center space-y-8 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
-        <div className="space-y-4 animate-fade-in">
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-heading font-black gradient-text-hero leading-tight">
+      {/* Contrast overlay to ensure WCAG AA text contrast */}
+      <div
+        className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/55 to-background/25"
+        aria-hidden="true"
+      />
+      {/* Vignette for cinematic depth */}
+      <div
+        className="pointer-events-none absolute inset-0"
+        aria-hidden="true"
+        style={{
+          background:
+            "radial-gradient(120% 90% at 50% 65%, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 55%, rgba(0,0,0,0.35) 100%)",
+        }}
+      />
+
+      {/* Three.js particle field (decorative) */}
+      <ThreeBackground
+        className="pointer-events-none absolute inset-0 text-cyan-300"
+        density={2200}
+        opacity={0.4}
+        speed={0.03}
+        colors={["#22d1ee", "#a3e635", "#38bdf8", "#60a5fa"]}
+      />
+
+      {/* Foreground content */}
+      <div className="relative z-10 mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 text-center space-y-8">
+        <header className="space-y-4">
+          <h1
+            id="hero-title"
+            className="text-pretty font-heading font-black leading-tight text-5xl sm:text-6xl lg:text-7xl"
+          >
             Learn. Build.
             <br />
-            <span className="text-6xl sm:text-7xl lg:text-8xl">Innovate.</span>
+            <span className="block text-6xl sm:text-7xl lg:text-8xl">
+              Innovate.
+            </span>
           </h1>
-          <p className="text-xl sm:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            DAU's oldest technical club celebrating 25 years of excellence. Join our legacy of 
-            innovation in electronics, robotics, and emerging technologies since 2001.
+          <p className="mx-auto max-w-3xl text-balance text-muted-foreground text-lg sm:text-xl leading-relaxed">
+            DAU&apos;s oldest technical club celebrating 25 years of excellence.
+            Join our legacy of innovation in electronics, robotics, and emerging
+            technologies since 2001.
           </p>
-        </div>
+        </header>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up">
-          <Button variant="hero" size="lg" onClick={() => (window.location.href = "#about")} className="text-lg px-8 py-4">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <Button
+            size="lg"
+            onClick={handleExplore}
+            className="text-base sm:text-lg px-7 sm:px-8 py-4"
+          >
             Explore
           </Button>
         </div>
-      </div>
 
-      {/* Gradient overlay for better text readability */}
-      <div className="absolute inset-0 bg-gradient-to-t from-background/50 via-transparent to-background/30"></div>
+        {/* Scroll cue */}
+        <div className="pt-4 flex justify-center">
+          <a
+            href="#about"
+            className="group inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground"
+            aria-label="Scroll to About section"
+          >
+            <ChevronDown className="h-5 w-5 transition-transform group-hover:translate-y-0.5" />
+            <span className="sr-only">Scroll down</span>
+          </a>
+        </div>
+      </div>
     </section>
   );
-};
-
-export default Hero;
+}
