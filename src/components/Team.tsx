@@ -41,7 +41,7 @@ const Team = () => {
       name: "Mahir Shah",
       role: "Core Member",
       image:
-        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&h=300&fit=crop&crop=face",
+        "/team/images/mahir.jpg",
       bio: "Expert in drone technology and wireless communication systems, leading hardware innovations.",
       social: {
         github: "#",

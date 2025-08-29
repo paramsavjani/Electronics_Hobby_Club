@@ -42,13 +42,6 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
-            <Button variant="hero" size="sm">
-              Join Club
-            </Button>
-          </div>
-
           {/* Mobile menu button */}
           <div className="md:hidden">
             <Button
@@ -56,7 +49,11 @@ const Navbar = () => {
               size="icon"
               onClick={() => setIsOpen(!isOpen)}
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
             </Button>
           </div>
         </div>
@@ -76,11 +73,6 @@ const Navbar = () => {
                 {item.name}
               </a>
             ))}
-            <div className="px-3 py-2">
-              <Button variant="hero" size="sm" className="w-full">
-                Join Club
-              </Button>
-            </div>
           </div>
         </div>
       )}
