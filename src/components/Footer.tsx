@@ -39,7 +39,6 @@ const Footer = () => {
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center space-x-2">
               <div className="relative">
-                <Zap className="h-8 w-8 text-primary animate-pulse-glow" />
                 <div className="absolute inset-0 bg-primary/20 blur-lg rounded-full"></div>
               </div>
               <span className="text-2xl font-heading font-bold gradient-text-primary">
