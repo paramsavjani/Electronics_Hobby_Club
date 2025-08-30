@@ -50,19 +50,6 @@ const Team = () => {
       },
     },
     {
-      name: "Malay Vaghasiya",
-      role: "Core Member",
-      category: "Core",
-      image:
-        "https://images.unsplash.com/photo-1494790108755-2616b056b6e0?w=300&h=300&fit=crop&crop=face",
-      bio: "Specializing in combat robotics and mechanical design for competitive bot building.",
-      social: {
-        github: "#",
-        linkedin: "#",
-        email: "malay@ehc-daiict.com",
-      },
-    },
-    {
       name: "Preet Patel",
       role: "Core Member",
       category: "Core",
