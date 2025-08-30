@@ -1,5 +1,3 @@
-import { Github, Linkedin, Mail } from "lucide-react";
-
 const Team = () => {
   const teamMembers = [
     {
