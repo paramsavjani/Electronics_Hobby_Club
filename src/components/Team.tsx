@@ -17,7 +17,7 @@ const Team = () => {
       role: "Deputy Convener",
       category: "Core",
       image:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face",
+        "",
       bio: "Supporting club operations and mentoring members in embedded systems and automation projects.",
       social: {
         github: "#",
@@ -54,7 +54,7 @@ const Team = () => {
       role: "Core Member",
       category: "Core",
       image:
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&crop=face",
+        "",
       bio: "IoT and sensor integration specialist, developing smart monitoring and automation systems.",
       social: {
         github: "#",
