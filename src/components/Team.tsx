@@ -122,7 +122,7 @@ const Team = () => {
     <section id="team" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       {/* Heading */}
       <div className="text-center mb-16 animate-fade-in">
-        <h2 className="text-4xl sm:text-5xl font-heading font-bold gradient-text-primary mb-6">
+        <h2 className="text-4xl sm:text-5xl font-heading font-bold gradient-text-primary mb-4">
           Meet Our Team
         </h2>
         <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
