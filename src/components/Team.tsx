@@ -6,11 +6,6 @@ const Team = () => {
       category: "Core",
       image: "/team/images/param.jpg",
       bio: "Leading the Electronics Hobby Club vision and driving innovation in robotics and IoT projects.",
-      social: {
-        github: "https://github.com/paramsavjani",
-        linkedin: "https://linkedin.com/in/paramsavjani",
-        email: "paramsavjani3010@gmail.com",
-      },
     },
     {
       name: "Shreyas Dutta",
@@ -19,11 +14,6 @@ const Team = () => {
       image:
         "",
       bio: "Supporting club operations and mentoring members in embedded systems and automation projects.",
-      social: {
-        github: "#",
-        linkedin: "#",
-        email: "shreyas@ehc-daiict.com",
-      },
     },
     {
       name: "Ayush Patel",
@@ -31,11 +21,6 @@ const Team = () => {
       category: "Core",
       image: "/team/images/aayush.jpg",
       bio: "Supporting club operations and mentoring members in embedded systems and automation projects.",
-      social: {
-        github: "#",
-        linkedin: "#",
-        email: "ayush@ehc-daiict.com",
-      },
     },
     {
       name: "Mahir Shah",
@@ -43,24 +28,21 @@ const Team = () => {
       category: "Core",
       image: "/team/images/mahir.jpg",
       bio: "Expert in drone technology and wireless communication systems, leading hardware innovations.",
-      social: {
-        github: "#",
-        linkedin: "#",
-        email: "mahir@ehc-daiict.com",
-      },
+    },
+    {
+      name: "Malay Vagasiya",
+      role: "Core Member",
+      category: "Core",
+      image: "/team/images/malay.jpg",
+      bio: "Expert in drone technology and wireless communication systems, leading hardware innovations.",
     },
     {
       name: "Preet Patel",
       role: "Core Member",
       category: "Core",
       image:
-        "",
+        "/team/images/preet.jpeg",
       bio: "IoT and sensor integration specialist, developing smart monitoring and automation systems.",
-      social: {
-        github: "#",
-        linkedin: "#",
-        email: "preet@ehc-daiict.com",
-      },
     },
     {
       name: "Jeet Patel",
@@ -68,11 +50,6 @@ const Team = () => {
       category: "Core",
       image: "/team/images/jeet.jpg",
       bio: "Supporting project development and event coordination for club activities and competitions.",
-      social: {
-        github: "#",
-        linkedin: "#",
-        email: "jeet@ehc-daiict.com",
-      },
     },
     {
       name: "Vyom Patel",
@@ -80,11 +57,6 @@ const Team = () => {
       category: "Core",
       image: "/team/images/vyom.jpg",
       bio: "Enthusiastic about microcontroller programming and PCB design for innovative electronics projects.",
-      social: {
-        github: "#",
-        linkedin: "#",
-        email: "vyom@ehc-daiict.com",
-      },
     },
 
     {
@@ -93,11 +65,6 @@ const Team = () => {
       category: "Mentors",
       image: "/team/images/rakshit.jpg",
       bio: "Enthusiastic about microcontroller programming and PCB design for innovative electronics projects.",
-      social: {
-        github: "#",
-        linkedin: "#",
-        email: "vyom@ehc-daiict.com",
-      },
     },
     {
       name: "Aum Bavarva",
@@ -105,11 +72,6 @@ const Team = () => {
       category: "Members",
       image: "/team/images/Aum_Bavarva.jpg",
       bio: "Enthusiastic about microcontroller programming and PCB design for innovative electronics projects.",
-      social: {
-        github: "#",
-        linkedin: "#",
-        email: "vyom@ehc-daiict.com",
-      },
     },
     {
       name: "Rudra Patel",
@@ -117,11 +79,6 @@ const Team = () => {
       category: "Members",
       image: "/team/images/rudra_patel.jpeg",
       bio: "Enthusiastic about microcontroller programming and PCB design for innovative electronics projects.",
-      social: {
-        github: "#",
-        linkedin: "#",
-        email: "vyom@ehc-daiict.com",
-      },
     },
     {
       name: "Hari Sharma",
@@ -129,11 +86,6 @@ const Team = () => {
       category: "Members",
       image: "/team/images/hari_sharma.jpg",
       bio: "Enthusiastic about microcontroller programming and PCB design for innovative electronics projects.",
-      social: {
-        github: "#",
-        linkedin: "#",
-        email: "vyom@ehc-daiict.com",
-      },
     },
     {
       name: "Shubh",
@@ -141,12 +93,27 @@ const Team = () => {
       category: "Members",
       image: "/team/images/shubh.jpeg",
       bio: "Enthusiastic about microcontroller programming and PCB design for innovative electronics projects.",
-      social: {
-        github: "#",
-        linkedin: "#",
-        email: "vyom@ehc-daiict.com",
-      },
     },
+    {
+      name: "Akshat",
+      role: "Member",
+      category: "Members",
+      image: "/team/images/akshat.jpg",
+      bio: "Enthusiastic about microcontroller programming and PCB design for innovative electronics projects.",
+    },
+    {
+      name: "Sahil Abbas",
+      role: "Member",
+      category: "Members",
+      image: "/team/images/sahil.jpg",
+      bio: "Enthusiastic about microcontroller programming and PCB design for innovative electronics projects.",
+    },{
+      name: "Shyam Bhuva",
+      role: "Member",
+      category: "Members",
+      image: "/team/images/SHYAM_BHUVA.jpg",
+      bio: "Enthusiastic about microcontroller programming and PCB design for innovative electronics projects.",
+    }
   ];
 
   const categories = ["Core", "Mentors", "Members"];
